@@ -10,7 +10,12 @@
         "noEmitOnError": true,
         "jsx": "react",
         "typeRoots": [ "node_modules/@types" ],
-        
+        "baseUrl": "../",
+        "paths": {
+            "redux-connected": [
+                "redux-connected"
+            ],
+        }
     },
     "exclude": [
         "node_modules",

@@ -1,13 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import StateViewer from '../components/StateViewer/StateViewer';
+import JsonViewer from '../components/JsonViewer/JsonViewer';
 
 const $i = (i: any) => i;
 
 export function StateViewerContainer() {
-    const state = useSelector($i);
+    const json = useSelector($i);
 
-    return <StateViewer state={state} />;
+    return <JsonViewer json={json} />;
 }
 
 export default StateViewerContainer;

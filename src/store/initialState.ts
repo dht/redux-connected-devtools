@@ -3,8 +3,6 @@ import {
     IReduxConnectedConfig,
     ConnectionType,
     RetryStrategy,
-    ActionLogBuilder,
-    apiActions,
 } from 'redux-connected';
 
 type IAppState = {
