@@ -1,6 +1,6 @@
 {
     "name": "redux-connected-devtools",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "redux-connected-devtools",
     "main": "src/index.ts",
     "scripts": {
