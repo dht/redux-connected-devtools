@@ -3896,10 +3896,10 @@ recrawl-sync@^2.0.3:
     slash "^3.0.0"
     tslib "^1.9.3"
 
-redux-connected@^0.0.89:
-  version "0.0.89"
-  resolved "https://registry.yarnpkg.com/redux-connected/-/redux-connected-0.0.89.tgz#80e489668671fc432bbbf76d58169e1c0b019bc4"
-  integrity sha512-MxO1jXJgNkvUP2f8aIVlFZVYi/nHeKMin+b2DoygoO/aBy1N2HH9t3YPRaXcVuXPZEXPDpZoEPJy2B6sbLGUFg==
+redux-connected@^0.0.90:
+  version "0.0.90"
+  resolved "https://registry.yarnpkg.com/redux-connected/-/redux-connected-0.0.90.tgz#7b6e742f535f6ea6ff58a5415979c5fce5318d8a"
+  integrity sha512-FNTLD7zVDG0KWYLX6hNixwI0V+/ZXRB+cl8WVNRdS0M0DyGpt1k76DcbFwSOq7dwSEOEmz5Q4YlKtb/71QPcKA==
   dependencies:
     "@testing-library/react-hooks" "^7.0.2"
     axios "^0.26.1"
