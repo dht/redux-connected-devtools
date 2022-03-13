@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Empty } from './DevList.style';
 import { FixedSizeList as List } from 'react-window';
 import { Json } from '../../types';
-import './DevList.scss';
 
 export type DevListProps = {
     items: Json[];

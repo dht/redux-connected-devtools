@@ -23,6 +23,7 @@ export const initialState: MyStore = {
 
 const config: IReduxConnectedConfig = {
     defaultEndpointsConfig: {
+        id: 'default',
         connectionType: ConnectionType.REST,
         retryStrategy: RetryStrategy.X2_TIMES,
     },

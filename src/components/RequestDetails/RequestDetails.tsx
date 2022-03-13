@@ -44,7 +44,10 @@ export function RequestDetails(props: RequestDetailsProps) {
                     </Tr>
                     <Tr>
                         <Td>responseSize</Td>
-                        <Td>{bytes(item.apiResponseSize)}</Td>
+                        <Td>
+                            {item.apiResponseSize &&
+                                bytes(item.apiResponseSize)}
+                        </Td>
                     </Tr>
                 </tbody>
             </Table>
