@@ -7,7 +7,6 @@ import {
     MenuItem,
     Title,
     Badge,
-    Version,
 } from './DevMenu.style';
 
 export type DevMenuProps = {
@@ -31,7 +30,7 @@ export function DevMenu(props: DevMenuProps) {
                 onClick={() => props.onClick(item)}
             >
                 <Title>{title}</Title>
-                <Badge>5</Badge>
+                {/* <Badge>5</Badge> */}
             </MenuItem>
         );
     }
@@ -61,7 +60,6 @@ export function DevMenu(props: DevMenuProps) {
             data-testid='DevMenu-container'
         >
             {renderGroups()}
-            <Version>1.0.0</Version>
         </Container>
     );
 }

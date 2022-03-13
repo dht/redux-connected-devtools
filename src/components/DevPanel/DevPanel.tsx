@@ -5,12 +5,9 @@ import { devComponents } from '../../data/devComponents';
 import { devGroups, devRoutes, IDevRoute } from '../../data/devRouter';
 import { Json } from '../../types';
 
-export type DevPanelProps = {
-    name: string;
-};
+export type DevPanelProps = {};
 
 export function DevPanel(props: DevPanelProps) {
-    const { name } = props;
     const [route, setRoute] = useState<IDevRoute>(devRoutes[0]);
 
     function renderRoute() {
@@ -29,10 +26,7 @@ export function DevPanel(props: DevPanelProps) {
                 selectedId={route.id}
                 onClick={(item: IDevRoute) => setRoute(item)}
             />
-            <Content>
-                {name}
-                {renderRoute()}
-            </Content>
+            <Content>{renderRoute()}</Content>
         </Container>
     );
 }

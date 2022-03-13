@@ -1,15 +1,20 @@
 import React from 'react';
+import { Json } from '../../types';
 import { Container } from './StateViewer.style';
 
-export type StateViewerProps = {};
+export type StateViewerProps = {
+    state: Json;
+};
 
-export function StateViewer(_props: StateViewerProps) {
+export function StateViewer(props: StateViewerProps) {
+    const { state } = props;
+
     return (
         <Container
             className='StateViewer-container'
             data-testid='StateViewer-container'
         >
-            StateViewer
+            <pre>{JSON.stringify(state, null, 4)}</pre>
         </Container>
     );
 }

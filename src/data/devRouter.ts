@@ -73,22 +73,28 @@ export const devRoutes: IDevRoute[] = [
         componentId: 'SagaViewer',
     },
     {
+        id: '/status',
+        title: 'Endpoint status',
+        group: 'state',
+        componentId: 'EndpointStatus',
+    },
+    {
         id: '/settings/global',
         title: 'Global settings',
         group: 'settings & stats',
-        componentId: 'JsonViewer',
+        componentId: 'GlobalSettings',
     },
     {
         id: '/settings/endpoints',
         title: 'Endpoints configs',
         group: 'settings & stats',
-        componentId: 'JsonViewer',
+        componentId: 'EndpointConfigs',
     },
     {
         id: '/stats/global',
         title: 'Global stats',
         group: 'settings & stats',
-        componentId: 'JsonViewer',
+        componentId: 'GlobalStats',
     },
 ];
 

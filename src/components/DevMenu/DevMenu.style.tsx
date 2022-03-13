@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 220px;
+    width: 190px;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 `;
@@ -44,10 +44,4 @@ export const Badge = styled.div`
     padding: 2px 10px;
     font-size: 13px;
     border-radius: 7px;
-`;
-
-export const Version = styled.div`
-    position: fixed;
-    bottom: 5px;
-    left: 5px;
 `;
