@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Lifecycle from '../components/Lifecycle/Lifecycle';
-import { $requestsPostAction } from '../store/selectors';
+import { $requestsPostActionPast } from '../store/selectors';
 
 export function LifecyclePostActionContainer() {
-    const requests = useSelector($requestsPostAction);
+    const requests = useSelector($requestsPostActionPast);
     return <Lifecycle requests={requests} />;
 }
 

@@ -1,4 +1,4 @@
-import DevMenu from '../DevMenu/DevMenu';
+import DevMenu from '../../containers/DevMenuContainer';
 import React, { useState } from 'react';
 import { Container, Content } from './DevPanel.style';
 import { devComponents } from '../../data/devComponents';
@@ -21,8 +21,6 @@ export function DevPanel(props: DevPanelProps) {
             data-testid='DevPanel-container'
         >
             <DevMenu
-                groups={devGroups}
-                items={devRoutes}
                 selectedId={route.id}
                 onClick={(item: IDevRoute) => setRoute(item)}
             />

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Lifecycle from '../components/Lifecycle/Lifecycle';
-import { $requestsPendingApi } from '../store/selectors';
+import { $requestsPendingApiPast } from '../store/selectors';
 
 export function LifecyclePendingApiContainer() {
-    const requests = useSelector($requestsPendingApi);
+    const requests = useSelector($requestsPendingApiPast);
     return <Lifecycle requests={requests} />;
 }
 

@@ -7,6 +7,7 @@ import {
     MenuItem,
     Title,
     Badge,
+    BadgeTotal,
 } from './DevMenu.style';
 
 export type DevMenuProps = {
@@ -14,14 +15,19 @@ export type DevMenuProps = {
     items: IDevRoute[];
     onClick: (route: IDevRoute) => void;
     selectedId: string;
+    badges: Record<string, number>;
+    badgesTotal: Record<string, number>;
 };
 
 export function DevMenu(props: DevMenuProps) {
-    const { groups, items, selectedId } = props;
+    const { groups, items, selectedId, badges, badgesTotal } = props;
 
     function renderItem(item: IDevRoute) {
         const { title, id } = item;
         const selected = id === selectedId;
+
+        const badge = badges[id];
+        const badgeTotal = badgesTotal[id];
 
         return (
             <MenuItem
@@ -30,7 +36,10 @@ export function DevMenu(props: DevMenuProps) {
                 onClick={() => props.onClick(item)}
             >
                 <Title>{title}</Title>
-                {/* <Badge>5</Badge> */}
+                {badgeTotal > 0 && badgeTotal !== badge && (
+                    <BadgeTotal>{badgeTotal}</BadgeTotal>
+                )}
+                {badge > 0 && <Badge>{badge}</Badge>}
             </MenuItem>
         );
     }

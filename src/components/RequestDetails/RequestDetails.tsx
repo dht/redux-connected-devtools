@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Table, Tr, Td } from './RequestDetails.style';
 import { ApiRequest } from 'redux-connected';
 import JsonViewer from '../JsonViewer/JsonViewer';
+import bytes from 'bytes';
 
 export type RequestDetailsProps = {
     item: ApiRequest;
@@ -43,7 +44,7 @@ export function RequestDetails(props: RequestDetailsProps) {
                     </Tr>
                     <Tr>
                         <Td>responseSize</Td>
-                        <Td>{item.apiResponseSize}</Td>
+                        <Td>{bytes(item.apiResponseSize)}</Td>
                     </Tr>
                 </tbody>
             </Table>

@@ -1,5 +1,4 @@
 import LifecycleReceivedContainer from '../containers/LifecycleReceivedContainer';
-import StateViewerContainer from '../containers/StateViewerContainer';
 import GlobalStatsContainer from '../containers/GlobalStatsContainer';
 import EndpointConfigsContainer from '../containers/EndpointConfigsContainer';
 import GlobalSettingsContainer from '../containers/GlobalSettingsContainer';
@@ -19,7 +18,6 @@ export const devComponents: DevComponents = {
     LifecyclePendingApi: LifecyclePendingApiContainer,
     LifecycleApiError: LifecycleApiErrorContainer,
     LifecyclePostAction: LifecyclePostActionContainer,
-    StateViewer: StateViewerContainer,
     GlobalSettings: GlobalSettingsContainer,
     GlobalStats: GlobalStatsContainer,
     EndpointConfigs: EndpointConfigsContainer,

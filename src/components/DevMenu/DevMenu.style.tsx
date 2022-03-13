@@ -40,8 +40,14 @@ export const Title = styled.div`
 `;
 
 export const Badge = styled.div`
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 2px 10px;
-    font-size: 13px;
+    background-color: rgba(0, 0, 80, 0.3);
+    padding: 0 4px;
+    font-size: 12px;
     border-radius: 7px;
+    border: 1px solid #334;
+    color: cyan;
+`;
+
+export const BadgeTotal = styled(Badge)`
+    color: #555;
 `;
