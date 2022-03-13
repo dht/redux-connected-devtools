@@ -1,5 +1,5 @@
 import React from 'react';
-import { IDevRoute } from '../../data/devRouter';
+import { IDevRoute } from '../../data/devRoutes';
 import {
     Container,
     MenuGroup,

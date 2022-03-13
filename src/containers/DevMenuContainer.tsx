@@ -6,8 +6,8 @@ import { connectedSelectors } from 'redux-connected';
 
 type DevPanelProps = {};
 
-export function DevPanelContainer(_props: DevPanelProps) {
+export function DevMenuContainer(_props: DevPanelProps) {
     return <DevPanel />;
 }
 
-export default DevPanelContainer;
+export default DevMenuContainer;

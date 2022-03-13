@@ -5,7 +5,6 @@ import { connectedSelectors } from 'redux-connected';
 
 export function GlobalStatsContainer() {
     const json = useSelector(connectedSelectors.$apiGlobalStats);
-    console.log('json ->', json);
 
     return <JsonViewer json={json} />;
 }

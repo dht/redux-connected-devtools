@@ -1,14 +1,31 @@
 import React from 'react';
 import { Container } from './DevList.style';
 import { FixedSizeList as List } from 'react-window';
+import { Json } from '../../types';
 import './DevList.scss';
 
-export type DevListProps = {};
+export type DevListProps = {
+    items: Json[];
+    row: React.FC<any>;
+    onClick: (item: any) => void;
+};
 
-export function DevList(_props: DevListProps) {
-    const Row = (rowInfo: any) => {
+export function DevList(props: DevListProps) {
+    const { row: Cmp, items } = props;
+
+    const Item = (rowInfo: any) => {
         const { index, style } = rowInfo;
-        return <div style={style}>Row {index}</div>;
+
+        const item = items[index];
+
+        return (
+            <Cmp
+                onClick={props.onClick}
+                index={index}
+                style={style}
+                item={item}
+            />
+        );
     };
 
     return (
@@ -18,12 +35,12 @@ export function DevList(_props: DevListProps) {
         >
             <List
                 height={850}
-                itemCount={1000}
-                itemSize={35}
+                itemCount={items.length}
+                itemSize={68}
                 width={350}
                 className='list'
             >
-                {Row}
+                {Item}
             </List>
         </Container>
     );

@@ -2,7 +2,7 @@ import DevMenu from '../DevMenu/DevMenu';
 import React, { useState } from 'react';
 import { Container, Content } from './DevPanel.style';
 import { devComponents } from '../../data/devComponents';
-import { devGroups, devRoutes, IDevRoute } from '../../data/devRouter';
+import { devGroups, devRoutes, IDevRoute } from '../../data/devRoutes';
 import { Json } from '../../types';
 
 export type DevPanelProps = {};
