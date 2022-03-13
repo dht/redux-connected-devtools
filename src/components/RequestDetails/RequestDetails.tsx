@@ -19,31 +19,31 @@ export function RequestDetails(props: RequestDetailsProps) {
                 <tbody>
                     <Tr>
                         <Td>sequence</Td>
-                        <Td>{item.meta.sequence}</Td>
+                        <Td>{item.sequence}</Td>
                     </Tr>
                     <Tr>
                         <Td>id</Td>
-                        <Td>{item.meta.shortId}</Td>
+                        <Td>{item.shortId}</Td>
                     </Tr>
                     <Tr>
                         <Td>apiVerb</Td>
-                        <Td>{item.apiVerb}</Td>
+                        <Td>{item.argsApiVerb}</Td>
                     </Tr>
                     <Tr>
                         <Td>connection</Td>
-                        <Td>{item.connectionType}</Td>
+                        <Td>{item.argsConnectionType}</Td>
                     </Tr>
                     <Tr>
                         <Td>duration</Td>
-                        <Td>{item.duration}</Td>
+                        <Td>{item.apiDuration}</Td>
                     </Tr>
                     <Tr>
                         <Td>nodeName</Td>
-                        <Td>{item.nodeName}</Td>
+                        <Td>{item.argsNodeName}</Td>
                     </Tr>
                     <Tr>
                         <Td>responseSize</Td>
-                        <Td>{item.responseSize}</Td>
+                        <Td>{item.apiResponseSize}</Td>
                     </Tr>
                 </tbody>
             </Table>

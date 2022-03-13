@@ -1,22 +1,17 @@
 import { createSelector } from 'reselect';
-import { MyStore } from './initialState';
 import { connectedSelectors, LifecycleStatus } from 'redux-connected';
-
-export const $i = (i: MyStore) => i;
-
-export const $appState = createSelector($i, (state) => state.appState);
 
 export const $requests = createSelector(
     connectedSelectors.$requests,
     (requests) => {
         return requests
             .map((request) => {
-                const { journey } = request;
+                const { items } = request;
 
-                const lastPoint = journey[journey.length - 1];
+                const lastPoint = items[items.length - 1];
 
-                const journeyWithDelta = journey.map((point, index) => {
-                    const nextPoint = journey[index + 1] || point;
+                const journeyWithDelta = items.map((point, index) => {
+                    const nextPoint = items[index + 1] || point;
                     const delta = nextPoint.timestamp - point.timestamp;
 
                     return {

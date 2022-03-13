@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './DevList.style';
+import { Container, Empty } from './DevList.style';
 import { FixedSizeList as List } from 'react-window';
 import { Json } from '../../types';
 import './DevList.scss';
@@ -28,11 +28,16 @@ export function DevList(props: DevListProps) {
         );
     };
 
-    return (
-        <Container
-            className='DevList-container'
-            data-testid='DevList-container'
-        >
+    function renderEmpty() {
+        return <Empty>Empty list</Empty>;
+    }
+
+    function renderList() {
+        if (items.length === 0) {
+            return renderEmpty();
+        }
+
+        return (
             <List
                 height={850}
                 itemCount={items.length}
@@ -42,6 +47,15 @@ export function DevList(props: DevListProps) {
             >
                 {Item}
             </List>
+        );
+    }
+
+    return (
+        <Container
+            className='DevList-container'
+            data-testid='DevList-container'
+        >
+            {renderList()}
         </Container>
     );
 }

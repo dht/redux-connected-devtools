@@ -4,7 +4,7 @@ import JsonViewer from '../components/JsonViewer/JsonViewer';
 import { connectedSelectors } from 'redux-connected';
 
 export function GlobalStatsContainer() {
-    const json = useSelector(connectedSelectors.$apiGlobalStats);
+    const json = useSelector(connectedSelectors.$apiGlobalStatsRaw);
 
     return <JsonViewer json={json} />;
 }

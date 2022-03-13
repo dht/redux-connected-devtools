@@ -15,7 +15,7 @@ export function RequestJourney(props: RequestJourneyProps) {
     }
 
     function renderItems() {
-        return item.journey.map((point: JourneyPoint, index: number) =>
+        return item.items.map((point: JourneyPoint, index: number) =>
             renderItem(point, index)
         );
     }

@@ -13,7 +13,7 @@ export type RequestRowProps = {
 
 export function RequestRow(props: RequestRowProps) {
     const { index, style, item } = props;
-    const { meta } = item;
+    const { sequence, createdTS } = item;
 
     return (
         <Container
@@ -24,11 +24,11 @@ export function RequestRow(props: RequestRowProps) {
             onClick={() => props.onClick(item)}
         >
             <Col>
-                <Id>{meta.sequence}</Id>
+                <Id>{sequence}</Id>
                 <Type>{item.originalAction?.type}</Type>
             </Col>
             <Col>
-                <Time value={meta.createdTS} />
+                <Time value={createdTS} />
             </Col>
         </Container>
     );

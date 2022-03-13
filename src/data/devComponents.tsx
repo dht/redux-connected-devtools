@@ -1,4 +1,3 @@
-import JsonViewerContainer from '../containers/JsonViewerContainer';
 import LifecycleReceivedContainer from '../containers/LifecycleReceivedContainer';
 import StateViewerContainer from '../containers/StateViewerContainer';
 import GlobalStatsContainer from '../containers/GlobalStatsContainer';
@@ -20,7 +19,6 @@ export const devComponents: DevComponents = {
     LifecyclePendingApi: LifecyclePendingApiContainer,
     LifecycleApiError: LifecycleApiErrorContainer,
     LifecyclePostAction: LifecyclePostActionContainer,
-    JsonViewer: JsonViewerContainer,
     StateViewer: StateViewerContainer,
     GlobalSettings: GlobalSettingsContainer,
     GlobalStats: GlobalStatsContainer,

@@ -4,7 +4,7 @@ import { connectedSelectors } from 'redux-connected';
 import { useSelector } from 'react-redux';
 
 export function EndpointStatusContainer() {
-    const json = useSelector(connectedSelectors.$apiRaw).status;
+    const json = useSelector(connectedSelectors.$endpointsStateRaw);
 
     return <JsonViewer json={json} />;
 }
