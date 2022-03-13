@@ -1,9 +1,8 @@
-import DevMenu from '../../containers/DevMenuContainer';
-import React from 'react';
+import DevMenu from '../DevMenu/DevMenu';
+import React, { useState } from 'react';
 import { Container, Content } from './DevPanel.style';
 import { devComponents } from '../../data/devComponents';
-import { devRoutes, IDevRoute } from '../../data/devRouter';
-import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
+import { devGroups, devRoutes, IDevRoute } from '../../data/devRouter';
 import { Json } from '../../types';
 
 export type DevPanelProps = {
@@ -12,20 +11,11 @@ export type DevPanelProps = {
 
 export function DevPanel(props: DevPanelProps) {
     const { name } = props;
-    const navigate = useNavigate();
+    const [route, setRoute] = useState<IDevRoute>(devRoutes[0]);
 
-    function onMenuClick(item: IDevRoute) {
-        navigate(item.path);
-    }
-
-    function renderItem(devRoute: IDevRoute) {
-        const { componentId, path } = devRoute;
-        const Cmp = devComponents[componentId];
-        return <Route path={path} key={path} element={<Cmp />} />;
-    }
-
-    function renderItems() {
-        return devRoutes.map((devRoutes: IDevRoute) => renderItem(devRoutes));
+    function renderRoute() {
+        const Cmp = devComponents[route.componentId];
+        return <Cmp key={route.id} />;
     }
 
     return (
@@ -33,13 +23,15 @@ export function DevPanel(props: DevPanelProps) {
             className='DevPanel-container'
             data-testid='DevPanel-container'
         >
-            <DevMenu onClick={onMenuClick} />
+            <DevMenu
+                groups={devGroups}
+                items={devRoutes}
+                selectedId={route.id}
+                onClick={(item: IDevRoute) => setRoute(item)}
+            />
             <Content>
                 {name}
-                <Routes>
-                    {renderItems()}
-                    <Route path='*' element={<Navigate to='/state' />} />
-                </Routes>
+                {renderRoute()}
             </Content>
         </Container>
     );

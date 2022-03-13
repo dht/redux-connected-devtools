@@ -1,5 +1,5 @@
 export type IDevRoute = {
-    path: string;
+    id: string;
     title: string;
     group: string;
     componentId: string;
@@ -7,85 +7,85 @@ export type IDevRoute = {
 
 export const devRoutes: IDevRoute[] = [
     {
-        path: '/lifecycle/original',
+        id: '/lifecycle/original',
         title: '1. Original',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/gatekeeper',
+        id: '/lifecycle/gatekeeper',
         title: '2. Gatekeeper',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/incoming',
+        id: '/lifecycle/incoming',
         title: '3. Incoming',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/queue',
+        id: '/lifecycle/queue',
         title: '4. Queue',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/firing',
+        id: '/lifecycle/firing',
         title: '5. Firing',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/api',
+        id: '/lifecycle/api',
         title: '6. API',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/error',
+        id: '/lifecycle/error',
         title: '7. Error',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/lifecycle/postAction',
+        id: '/lifecycle/postAction',
         title: '8. Post-action',
         group: 'lifecycle',
         componentId: 'Lifecycle',
     },
     {
-        path: '/logs',
+        id: '/logs',
         title: 'Logs',
         group: 'state',
         componentId: 'LogsViewer',
     },
     {
-        path: '/state',
+        id: '/state',
         title: 'State',
         group: 'state',
         componentId: 'StateViewer',
     },
     {
-        path: '/sagas',
+        id: '/sagas',
         title: 'Sagas',
         group: 'state',
         componentId: 'SagaViewer',
     },
     {
-        path: '/settings/global',
+        id: '/settings/global',
         title: 'Global settings',
         group: 'settings & stats',
         componentId: 'JsonViewer',
     },
     {
-        path: '/settings/endpoints',
+        id: '/settings/endpoints',
         title: 'Endpoints configs',
         group: 'settings & stats',
         componentId: 'JsonViewer',
     },
     {
-        path: '/stats/global',
+        id: '/stats/global',
         title: 'Global stats',
         group: 'settings & stats',
         componentId: 'JsonViewer',

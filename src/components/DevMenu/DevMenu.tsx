@@ -14,21 +14,20 @@ export type DevMenuProps = {
     groups: string[];
     items: IDevRoute[];
     onClick: (route: IDevRoute) => void;
-    pathname: string;
+    selectedId: string;
 };
 
 export function DevMenu(props: DevMenuProps) {
-    const { groups, items, pathname } = props;
+    const { groups, items, selectedId } = props;
 
     function renderItem(item: IDevRoute) {
-        const { title, path } = item;
-
-        const selected = path === pathname;
+        const { title, id } = item;
+        const selected = id === selectedId;
 
         return (
             <MenuItem
                 selected={selected}
-                key={item.path}
+                key={item.id}
                 onClick={() => props.onClick(item)}
             >
                 <Title>{title}</Title>

@@ -6,6 +6,7 @@ import { connectedSelectors } from 'redux-connected';
 
 export function DevPanelContainer() {
     const globalSettings = useSelector(connectedSelectors.$apiGlobalSettings);
+
     return <DevPanel name={String(globalSettings.beat)} />;
 }
 
