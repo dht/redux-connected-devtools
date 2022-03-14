@@ -33,20 +33,20 @@ export const devRoutes: IDevRoute[] = [
     },
     {
         id: 'lifecycleGeneralError',
-        title: 'e1. General error',
+        title: 'e1. General errors',
         group: 'errors',
         componentId: 'LifecycleGeneralError',
     },
     {
         id: 'lifecycleApiError',
-        title: 'e2. API error',
+        title: 'e2. API errors',
         group: 'errors',
         componentId: 'LifecycleApiError',
     },
     {
         id: 'endpointStatus',
         title: 'Endpoint status',
-        group: 'state',
+        group: 'settings & stats',
         componentId: 'EndpointStatus',
     },
     {
