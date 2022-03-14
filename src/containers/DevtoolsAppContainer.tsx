@@ -15,14 +15,7 @@ export function DevtoolsAppContainer(props: DevtoolsAppProps) {
     const [show, toggleShow] = useToggle(false);
     const storeSizeInBytes = useStoreSize(connectedStore);
 
-    useKey(
-        '`',
-        () => {
-            toggleShow();
-        },
-        {},
-        []
-    );
+    useKey('`', toggleShow, {}, []);
 
     if (!show) {
         return null;
