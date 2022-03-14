@@ -71,28 +71,6 @@ export const $requestsInQueuePast = createSelector($requests, (requests) => {
 });
 
 // 3
-export const $requestsGeneralError = createSelector($requests, (requests) => {
-    return requests.filter((request) => {
-        const { items } = request;
-        const lastPoint = items[items.length - 1];
-        return lastPoint && lastPoint.status === LifecycleStatus.GENERAL_ERROR;
-    });
-});
-
-export const $requestsGeneralErrorPast = createSelector(
-    $requests,
-    (requests) => {
-        return requests.filter((request) => {
-            const { items } = request;
-
-            return items.find(
-                (point) => point.status === LifecycleStatus.GENERAL_ERROR
-            );
-        });
-    }
-);
-
-// 4
 export const $requestsPendingApi = createSelector($requests, (requests) => {
     return requests.filter((request) => {
         const { items } = request;
@@ -114,26 +92,7 @@ export const $requestsPendingApiPast = createSelector($requests, (requests) => {
     });
 });
 
-// 5
-export const $requestsApiError = createSelector($requests, (requests) => {
-    return requests.filter((request) => {
-        const { items } = request;
-        const lastPoint = items[items.length - 1];
-        return lastPoint && lastPoint.status === LifecycleStatus.API_ERROR;
-    });
-});
-
-export const $requestsApiErrorPast = createSelector($requests, (requests) => {
-    return requests.filter((request) => {
-        const { items } = request;
-
-        return items.find(
-            (point) => point.status === LifecycleStatus.API_ERROR
-        );
-    });
-});
-
-// 6
+// 4
 export const $requestsPostAction = createSelector($requests, (requests) => {
     return requests.filter((request) => {
         const { items } = request;
@@ -148,6 +107,47 @@ export const $requestsPostActionPast = createSelector($requests, (requests) => {
 
         return items.find(
             (point) => point.status === LifecycleStatus.POST_ACTION
+        );
+    });
+});
+
+// e1
+export const $requestsGeneralError = createSelector($requests, (requests) => {
+    return requests.filter((request) => {
+        const { items } = request;
+        const lastPoint = items[items.length - 1];
+        return lastPoint && lastPoint.status === LifecycleStatus.GENERAL_ERROR;
+    });
+});
+
+export const $requestsGeneralErrorPast = createSelector(
+    $requests,
+    (requests) => {
+        return requests.filter((request) => {
+            const { items } = request;
+
+            return items.find(
+                (point) => point.status === LifecycleStatus.GENERAL_ERROR
+            );
+        });
+    }
+);
+
+// e2
+export const $requestsApiError = createSelector($requests, (requests) => {
+    return requests.filter((request) => {
+        const { items } = request;
+        const lastPoint = items[items.length - 1];
+        return lastPoint && lastPoint.status === LifecycleStatus.API_ERROR;
+    });
+});
+
+export const $requestsApiErrorPast = createSelector($requests, (requests) => {
+    return requests.filter((request) => {
+        const { items } = request;
+
+        return items.find(
+            (point) => point.status === LifecycleStatus.API_ERROR
         );
     });
 });

@@ -18,29 +18,30 @@ export const devRoutes: IDevRoute[] = [
         group: 'lifecycle',
         componentId: 'LifecycleInQueue',
     },
-    {
-        id: 'lifecycleGeneralError',
-        title: '3. General error',
-        group: 'lifecycle',
-        componentId: 'LifecycleGeneralError',
-    },
+
     {
         id: 'lifecyclePendingApi',
-        title: '4. Pending API',
+        title: '3. Pending API',
         group: 'lifecycle',
         componentId: 'LifecyclePendingApi',
     },
     {
-        id: 'lifecycleApiError',
-        title: '5. API error',
-        group: 'lifecycle',
-        componentId: 'LifecycleApiError',
-    },
-    {
         id: 'lifecyclePostAction',
-        title: '6. Post action',
+        title: '4. Post action',
         group: 'lifecycle',
         componentId: 'LifecyclePostAction',
+    },
+    {
+        id: 'lifecycleGeneralError',
+        title: 'e1. General error',
+        group: 'errors',
+        componentId: 'LifecycleGeneralError',
+    },
+    {
+        id: 'lifecycleApiError',
+        title: 'e2. API error',
+        group: 'errors',
+        componentId: 'LifecycleApiError',
     },
     {
         id: 'endpointStatus',
