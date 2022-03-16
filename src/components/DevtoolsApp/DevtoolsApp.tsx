@@ -10,7 +10,7 @@ import Size from '../Size/Size';
 export type DevtoolsAppProps = {
     connectedStore: any;
     toggleShow: () => void;
-    clearCompleted: () => void;
+    clearRequests: () => void;
     downloadState: () => void;
     storeSizeInBytes?: number;
 };
@@ -52,7 +52,7 @@ export function DevtoolsApp(props: DevtoolsAppProps) {
                         <Size size={storeSizeInBytes} />
                         <Icon
                             name='clearAll'
-                            onClick={() => props.clearCompleted()}
+                            onClick={() => props.clearRequests()}
                         />
                         <Icon name='download' onClick={props.downloadState} />
                         <Icon name='close' onClick={props.toggleShow} />

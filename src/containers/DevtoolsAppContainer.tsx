@@ -21,7 +21,7 @@ export function DevtoolsAppContainer(props: DevtoolsAppProps) {
         return null;
     }
 
-    function clearCompleted() {
+    function clearRequests() {
         connectedStore.dispatch(clearCompletedRequests());
         connectedStore.dispatch(clearFailedRequests());
         // also reset time
@@ -38,7 +38,7 @@ export function DevtoolsAppContainer(props: DevtoolsAppProps) {
     return (
         <DevtoolsApp
             connectedStore={connectedStore}
-            clearCompleted={clearCompleted}
+            clearRequests={clearRequests}
             downloadState={downloadState}
             toggleShow={toggleShow}
             storeSizeInBytes={storeSizeInBytes}
