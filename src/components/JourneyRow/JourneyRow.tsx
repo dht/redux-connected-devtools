@@ -14,6 +14,7 @@ const statusMap: Record<LifecycleStatus, string> = {
     [LifecycleStatus.PENDING_API_RESPONSE]: 'Pending API',
     [LifecycleStatus.API_ERROR]: 'API error',
     [LifecycleStatus.POST_ACTION]: 'Post action',
+    [LifecycleStatus.FAILED]: 'Failed',
 };
 
 export function JourneyRow(props: JourneyRowProps) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import DevtoolsApp from '../components/DevtoolsApp/DevtoolsApp';
 import { useKey, useToggle } from 'react-use';
-import { clearCompletedRequests } from 'redux-connected';
+import { clearCompletedRequests, clearFailedRequests } from 'redux-connected';
 import { getMinutes, resetStartOfTime } from '../utils/date';
 import { download } from '../utils/download';
 import { useStoreSize } from '../hooks/useStoreSize';
@@ -23,6 +23,7 @@ export function DevtoolsAppContainer(props: DevtoolsAppProps) {
 
     function clearCompleted() {
         connectedStore.dispatch(clearCompletedRequests());
+        connectedStore.dispatch(clearFailedRequests());
         // also reset time
         resetStartOfTime();
     }

@@ -44,6 +44,12 @@ export const devRoutes: IDevRoute[] = [
         componentId: 'LifecycleApiError',
     },
     {
+        id: 'lifecycleFailed',
+        title: 'e3. Failed requests (after retries)',
+        group: 'errors',
+        componentId: 'LifecycleFailed',
+    },
+    {
         id: 'endpointStatus',
         title: 'Endpoint status',
         group: 'settings & stats',

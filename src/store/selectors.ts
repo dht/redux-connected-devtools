@@ -142,6 +142,17 @@ export const $requestsApiError = createSelector($requests, (requests) => {
     });
 });
 
+// e3
+export const $requestsFailed = createSelector($requests, (requests) => {
+    return requests.filter((request) => {
+        const { items } = request;
+        
+        return items.find(
+            (point) => point.status === LifecycleStatus.FAILED
+        );
+    });
+});
+
 export const $requestsApiErrorPast = createSelector($requests, (requests) => {
     return requests.filter((request) => {
         const { items } = request;
@@ -158,6 +169,7 @@ export const $menuBadges = createSelector(
     $requestsGeneralError,
     $requestsPendingApi,
     $requestsApiError,
+    $requestsFailed,
     $requestsPostAction,
     (
         requestsReceived,
@@ -165,6 +177,7 @@ export const $menuBadges = createSelector(
         requestsGeneralError,
         requestsPendingApi,
         requestsApiError,
+        requestsFailed,
         requestsPostAction
     ) => {
         return {
@@ -173,6 +186,7 @@ export const $menuBadges = createSelector(
             lifecycleGeneralError: requestsGeneralError.length,
             lifecyclePendingApi: requestsPendingApi.length,
             lifecycleApiError: requestsApiError.length,
+            lifecycleFailed: requestsFailed.length,
             lifecyclePostAction: requestsPostAction.length,
         };
     }
@@ -184,6 +198,7 @@ export const $menuBadgesTotal = createSelector(
     $requestsGeneralErrorPast,
     $requestsPendingApiPast,
     $requestsApiErrorPast,
+    $requestsFailed,
     $requestsPostActionPast,
     (
         requestsReceived,
@@ -191,6 +206,7 @@ export const $menuBadgesTotal = createSelector(
         requestsGeneralError,
         requestsPendingApi,
         requestsApiError,
+        requestsFailed,
         requestsPostAction
     ) => {
         return {
@@ -199,6 +215,7 @@ export const $menuBadgesTotal = createSelector(
             lifecycleGeneralError: requestsGeneralError.length,
             lifecyclePendingApi: requestsPendingApi.length,
             lifecycleApiError: requestsApiError.length,
+            lifecycleFailed: requestsFailed.length,
             lifecyclePostAction: requestsPostAction.length,
         };
     }

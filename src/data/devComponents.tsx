@@ -8,6 +8,7 @@ import LifecycleGeneralErrorContainer from '../containers/LifecycleGeneralErrorC
 import LifecyclePendingApiContainer from '../containers/LifecyclePendingApiContainer';
 import LifecycleApiErrorContainer from '../containers/LifecycleApiErrorContainer';
 import LifecyclePostActionContainer from '../containers/LifecyclePostActionContainer';
+import LifecycleFailedContainer from '../containers/LifecycleFailedContainer';
 
 type DevComponents = Record<string, React.FC<any>>;
 
@@ -17,6 +18,7 @@ export const devComponents: DevComponents = {
     LifecycleGeneralError: LifecycleGeneralErrorContainer,
     LifecyclePendingApi: LifecyclePendingApiContainer,
     LifecycleApiError: LifecycleApiErrorContainer,
+    LifecycleFailed: LifecycleFailedContainer,
     LifecyclePostAction: LifecyclePostActionContainer,
     GlobalSettings: GlobalSettingsContainer,
     GlobalStats: GlobalStatsContainer,
