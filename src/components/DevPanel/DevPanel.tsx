@@ -1,11 +1,13 @@
 import DevMenu from '../../containers/DevMenuContainer';
 import React, { useState } from 'react';
-import { Container, Content } from './DevPanel.style';
+import { Actions, Container, Content } from './DevPanel.style';
 import { devComponents } from '../../data/devComponents';
-import { devGroups, devRoutes, IDevRoute } from '../../data/devRoutes';
+import { devRoutes, IDevRoute } from '../../data/devRoutes';
 import { Json } from '../../types';
 
-export type DevPanelProps = {};
+export type DevPanelProps = {
+    children: JSX.Element | JSX.Element[];
+};
 
 export function DevPanel(props: DevPanelProps) {
     const [route, setRoute] = useState<IDevRoute>(devRoutes[0]);
@@ -24,6 +26,7 @@ export function DevPanel(props: DevPanelProps) {
                 selectedId={route.id}
                 onClick={(item: IDevRoute) => setRoute(item)}
             />
+            <Actions>{props.children}</Actions>
             <Content>{renderRoute()}</Content>
         </Container>
     );

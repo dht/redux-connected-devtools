@@ -14,3 +14,12 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 `;
+
+export const Actions = styled.div`
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`;

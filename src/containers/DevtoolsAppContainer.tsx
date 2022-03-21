@@ -1,6 +1,5 @@
 import React from 'react';
 import DevtoolsApp from '../components/DevtoolsApp/DevtoolsApp';
-import { useKey, useToggle } from 'react-use';
 import { clearCompletedRequests, clearFailedRequests } from 'redux-connected';
 import { getMinutes, resetStartOfTime } from '../utils/date';
 import { download } from '../utils/download';
@@ -12,14 +11,7 @@ export type DevtoolsAppProps = {
 
 export function DevtoolsAppContainer(props: DevtoolsAppProps) {
     const { connectedStore } = props;
-    const [show, toggleShow] = useToggle(false);
     const storeSizeInBytes = useStoreSize(connectedStore);
-
-    useKey('`', toggleShow, {}, []);
-
-    if (!show) {
-        return null;
-    }
 
     function clearRequests() {
         connectedStore.dispatch(clearCompletedRequests());
@@ -40,7 +32,6 @@ export function DevtoolsAppContainer(props: DevtoolsAppProps) {
             connectedStore={connectedStore}
             clearRequests={clearRequests}
             downloadState={downloadState}
-            toggleShow={toggleShow}
             storeSizeInBytes={storeSizeInBytes}
         />
     );

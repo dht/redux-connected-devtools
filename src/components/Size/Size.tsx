@@ -13,7 +13,7 @@ export function Size(props: SizeProps) {
 
     return (
         <Container className='Size-container' data-testid='Size-container'>
-            {sizeText}
+            {!size ? '-' : sizeText}
         </Container>
     );
 }
