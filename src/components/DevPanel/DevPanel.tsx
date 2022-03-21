@@ -32,6 +32,10 @@ export function DevPanel(props: DevPanelProps) {
     );
 }
 
+/*
+    for the chrome extension devtools panel
+    TODO: find another way to encapsulate this
+
 let bgConnection;
 
 function init(id: string) {
@@ -50,5 +54,6 @@ if (chrome) {
     const tabId = String(chrome.devtools?.inspectedWindow.tabId || '');
     init(tabId);
 }
+*/
 
 export default DevPanel;
