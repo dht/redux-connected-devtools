@@ -24,6 +24,7 @@ export const Container = styled.div<{ index: number }>`
             bottom: 0;
             background-color: rgba(0, 171, 85);
             opacity: 0.05;
+            pointer-events: none;
         }
     }
 

@@ -43,6 +43,7 @@ export const MenuItem = styled.div`
             bottom: 0;
             background-color: rgba(0, 171, 85);
             opacity: 0.05;
+            pointer-events: none;
         }
     }
 
