@@ -11,17 +11,15 @@ export const Container = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-        border-top: 1px solid var(--gray-2);
-        border-right: 1px solid var(--gray-2);
-        border-left: 1px solid var(--gray-2);
+        border-left: 1px solid var(--gray-border);
         background: var(--white);
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--gray-2);
+        background: var(--gray-border);
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: var(--gray-3);
+        background: var(--gray-2);
     }
 `;

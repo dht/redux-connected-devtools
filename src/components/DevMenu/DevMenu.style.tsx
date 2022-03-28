@@ -3,17 +3,17 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 190px;
     background-color: var(--gray-1);
-    border-right: 1px solid var(--gray-2);
+    border-right: 1px solid var(--gray-border);
 `;
 
 export const MenuGroup = styled.div`
-    border-bottom: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-border);
 `;
 
 export const MenuGroupTitle = styled.div`
     font-size: 13px;
     padding: 5px 10px;
-    border-bottom: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-border);
     background-color: var(--white);
     opacity: 0.8;
     color: var(--gray-4);
@@ -72,7 +72,7 @@ export const Badge = styled.div`
     font-size: 12px;
     border-radius: 7px;
     background-color: var(--white);
-    border: 1px solid var(--gray-2);
+    border: 1px solid var(--gray-border);
     color: var(--gray-3);
 `;
 

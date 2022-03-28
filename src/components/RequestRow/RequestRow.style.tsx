@@ -6,7 +6,6 @@ export const Container = styled.div<{ index: number }>`
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid var(--gray-2);
 
     &:nth-child(2n-1) {
         background-color: var(--gray-1);
