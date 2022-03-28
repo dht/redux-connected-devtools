@@ -6,36 +6,46 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 10px 20px;
+    border-bottom: 1px solid var(--gray-2);
+    position: relative;
+    color: var(--gray-4);
 
     &:nth-child(2n-1) {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: var(--gray-1);
     }
 
     &:hover {
-        background-color: rgba(0, 0, 0, 0.3);
         cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 171, 85);
+            opacity: 0.05;
+        }
     }
 `;
 
-export const Status = styled.div`
-    color: #aaa;
-`;
+export const Status = styled.div``;
 
 export const DataIcon = styled.div`
-    background-color: #000;
     padding: 3px 7px;
     font-size: 13px;
     font-weight: bold;
-    color: purple;
     border-radius: 5px;
     margin-left: 10px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-2);
 `;
 
 export const Delta = styled.div`
     font-size: 13px;
     width: 60px;
     font-weight: bold;
-    color: olive;
     margin-right: 10px;
     text-align: center;
     font-family: monospace;

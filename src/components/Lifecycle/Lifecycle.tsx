@@ -22,7 +22,12 @@ export function Lifecycle(props: LifecycleProps) {
             className='Lifecycle-container'
             data-testid='Lifecycle-container'
         >
-            <DevList items={requests} row={RequestRow} onClick={onClick} />
+            <DevList
+                items={requests}
+                row={RequestRow}
+                onClick={onClick}
+                selectedRow={item}
+            />
             <DevInspector item={item} />
         </Container>
     );

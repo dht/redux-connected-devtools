@@ -2,24 +2,28 @@ import React from 'react';
 import { Container, Empty } from './DevList.style';
 import { FixedSizeList as List } from 'react-window';
 import { Json } from '../../types';
+import classnames from 'classnames';
 
 export type DevListProps = {
     items: Json[];
     row: React.FC<any>;
+    selectedRow: any;
     onClick: (item: any) => void;
 };
 
 export function DevList(props: DevListProps) {
-    const { row: Cmp, items } = props;
+    const { row: Cmp, items, selectedRow } = props;
 
     const Item = (rowInfo: any) => {
         const { index, style } = rowInfo;
 
         const item = items[index];
+        const className = classnames({ selected: item.id === selectedRow?.id });
 
         return (
             <Cmp
                 onClick={props.onClick}
+                className={className}
                 index={index}
                 style={style}
                 item={item}

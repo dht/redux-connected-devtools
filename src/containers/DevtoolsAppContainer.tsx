@@ -7,16 +7,17 @@ import { useStoreSize } from '../hooks/useStoreSize';
 
 export type DevtoolsAppProps = {
     connectedStore: any;
+    isDarkMode?: boolean;
 };
 
 export function DevtoolsAppContainer(props: DevtoolsAppProps) {
-    const { connectedStore } = props;
+    const { connectedStore, isDarkMode } = props;
     const storeSizeInBytes = useStoreSize(connectedStore);
 
     function clearRequests() {
         connectedStore.dispatch(clearCompletedRequests());
         connectedStore.dispatch(clearFailedRequests());
-        // also reset time
+        // also resets time
         resetStartOfTime();
     }
 
@@ -33,6 +34,7 @@ export function DevtoolsAppContainer(props: DevtoolsAppProps) {
             clearRequests={clearRequests}
             downloadState={downloadState}
             storeSizeInBytes={storeSizeInBytes}
+            isDarkMode={isDarkMode}
         />
     );
 }

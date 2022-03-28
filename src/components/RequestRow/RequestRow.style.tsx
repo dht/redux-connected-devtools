@@ -6,12 +6,38 @@ export const Container = styled.div<{ index: number }>`
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    background-color: ${(props) =>
-        props.index % 2 === 1 ? 'rgba(0, 0, 0, 0.2)' : 'transparent'};
+    border-bottom: 1px solid var(--gray-2);
+
+    &:nth-child(2n-1) {
+        background-color: var(--gray-1);
+    }
 
     &:hover {
-        background-color: rgba(0, 0, 0, 0.7);
         cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 171, 85);
+            opacity: 0.05;
+        }
+    }
+
+    &.selected {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 171, 85);
+            opacity: 0.1;
+        }
     }
 `;
 
@@ -22,10 +48,8 @@ export const Col = styled.div`
 `;
 
 export const Id = styled.div`
-    color: goldenrod;
     font-size: 16px;
+    color: var(--gray-2);
 `;
 
-export const Type = styled.div`
-    color: brown;
-`;
+export const Type = styled.div``;

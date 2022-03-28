@@ -6,26 +6,28 @@ export const Container = styled.div<{ width?: number }>`
     overflow: auto;
     padding: 0 25px;
     max-width: ${(props) => (props.width ? props.width + 'px' : '680px')};
-    color: #ccc;
     line-height: 26px;
+    border-top: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-2);
+    color: var(--gray-4);
 
     &::-webkit-scrollbar {
         width: 8px;
         height: 7px;
     }
 
-    /* Track */
     &::-webkit-scrollbar-track {
-        background: #333;
+        border-top: 1px solid var(--gray-2);
+        border-right: 1px solid var(--gray-2);
+        border-left: 1px solid var(--gray-2);
+        background: var(--white);
     }
 
-    /* Handle */
     &::-webkit-scrollbar-thumb {
-        background: #555;
+        background: var(--gray-2);
     }
 
-    /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-        background: #666;
+        background: var(--gray-3);
     }
 `;

@@ -9,6 +9,7 @@ import {
     Badge,
     BadgeTotal,
 } from './DevMenu.style';
+import classnames from 'classnames';
 
 export type DevMenuProps = {
     groups: string[];
@@ -31,8 +32,8 @@ export function DevMenu(props: DevMenuProps) {
 
         return (
             <MenuItem
-                selected={selected}
                 key={item.id}
+                className={classnames({ selected })}
                 onClick={() => props.onClick(item)}
             >
                 <Title>{title}</Title>

@@ -8,16 +8,17 @@ export type RequestRowProps = {
     style: Json;
     item: ApiRequest;
     index: number;
+    className?: string;
     onClick: (item: ApiRequest) => void;
 };
 
 export function RequestRow(props: RequestRowProps) {
-    const { index, style, item } = props;
+    const { index, style, item, className } = props;
     const { sequence, createdTS } = item;
 
     return (
         <Container
-            className='DevListRow-container'
+            className={`DevListRow-container ${className}`}
             data-testid='DevListRow-container'
             style={style}
             index={index}

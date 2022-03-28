@@ -4,22 +4,28 @@ import { Container } from './DevtoolsApp.style';
 import { DevPanelContainer } from '../../containers/DevPanelContainer';
 import { Provider } from 'react-redux';
 import Size from '../Size/Size';
+import classnames from 'classnames';
 
 export type DevtoolsAppProps = {
     connectedStore: any;
     clearRequests: () => void;
     downloadState: () => void;
     storeSizeInBytes?: number;
+    isDarkMode?: boolean;
 };
 
 export function DevtoolsApp(props: DevtoolsAppProps) {
-    const { connectedStore, storeSizeInBytes } = props;
+    const { connectedStore, storeSizeInBytes, isDarkMode } = props;
     const ref = useRef(null);
+
+    const className = classnames('DevtoolsApp-container', {
+        darkMode: isDarkMode,
+    });
 
     return (
         <Container
             ref={ref}
-            className='DevtoolsApp-container'
+            className={className}
             data-testid='DevtoolsApp-container'
         >
             <Provider store={connectedStore}>
