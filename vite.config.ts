@@ -6,7 +6,7 @@ const path = require('path');
 require('dotenv-flow').config();
 
 const cwd = path.resolve(process.cwd(), '../../');
-const host = (process.env.VITE_SERVER_DOMAIN||'').replace(/https?:\/\//, '');
+const host = (process.env.VITE_SERVER_DOMAIN || '').replace(/https?:\/\//, '');
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,20 +22,19 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            '@payem/forms': `${cwd}/packages/web-forms/src`,
-            '@payem/tables': `${cwd}/packages/web-tables/src`,
-            '@payem/details': `${cwd}/packages/web-details/src`,
-            '@payem/devtools': `${cwd}/packages/web-devtools/src`,
-            '@payem/router': `${cwd}/packages/web-router/src`,
-            '@payem/ui': `${cwd}/packages/web-ui/src`,
-            '@payem/base-ui': `${cwd}/packages/web-base-ui/src`,
-            '@payem/testing-base': `${cwd}/packages/web-testing-base/src`,
-            '@payem/hooks': `${cwd}/packages/hooks/src`,
-            '@payem/root-types': `${cwd}/packages/root-types/src`,
-            '@payem/themes': `${cwd}/packages/web-themes/src`,
-            '@minimal/widgets': `${cwd}/packages/minimal`,
-            '@payem/platformer': `${cwd}/packages/platformer`,
-            '@payem/app-home': `${cwd}/apps/home`,
+            '@pillooo/forms': `${cwd}/packages/web-forms/src`,
+            '@pillooo/tables': `${cwd}/packages/web-tables/src`,
+            '@pillooo/details': `${cwd}/packages/web-details/src`,
+            '@pillooo/devtools': `${cwd}/packages/web-devtools/src`,
+            '@pillooo/router': `${cwd}/packages/web-router/src`,
+            '@pillooo/ui': `${cwd}/packages/web-ui/src`,
+            '@pillooo/base-ui': `${cwd}/packages/web-base-ui/src`,
+            '@pillooo/testing-base': `${cwd}/packages/web-testing-base/src`,
+            '@pillooo/hooks': `${cwd}/packages/hooks/src`,
+            '@pillooo/root-types': `${cwd}/packages/root-types/src`,
+            '@pillooo/themes': `${cwd}/packages/web-themes/src`,
+            '@pillooo/platformer': `${cwd}/packages/platformer`,
+            '@pillooo/app-home': `${cwd}/apps/home`,
         },
     },
     server: {
