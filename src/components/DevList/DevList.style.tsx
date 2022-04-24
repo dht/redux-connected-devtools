@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     flex: 1;
-    border-right: 1px solid var(--gray-border);
-    color: var(--gray-4);
 
     .list {
         &::-webkit-scrollbar {
@@ -28,7 +26,9 @@ export const Container = styled.div`
 `;
 
 export const Empty = styled.div`
+    color: #456;
     margin: 30px;
     font-size: 17px;
     text-align: center;
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
 `;

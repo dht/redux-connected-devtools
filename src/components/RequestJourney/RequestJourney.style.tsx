@@ -2,24 +2,26 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     flex: 1;
+    border-top: 1px solid #333;
     max-height: 380px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
         width: 8px;
-        height: 7px;
     }
 
+    /* Track */
     &::-webkit-scrollbar-track {
-        border-left: 1px solid var(--gray-border);
-        background: var(--white);
+        background: #333;
     }
 
+    /* Handle */
     &::-webkit-scrollbar-thumb {
-        background: var(--gray-border);
+        background: #555;
     }
 
+    /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-        background: var(--gray-2);
+        background: #666;
     }
 `;
