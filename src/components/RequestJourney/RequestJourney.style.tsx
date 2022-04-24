@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ width?: number }>`
+export const Container = styled.div`
     flex: 1;
-    max-height: 850px;
-    overflow: auto;
-    padding: 0 25px;
-    max-width: ${(props) => (props.width ? props.width + 'px' : '680px')};
-    line-height: 26px;
-    color: var(--gray-4);
+    max-height: 380px;
+    overflow-y: scroll;
 
     &::-webkit-scrollbar {
         width: 8px;
@@ -15,7 +11,7 @@ export const Container = styled.div<{ width?: number }>`
     }
 
     &::-webkit-scrollbar-track {
-        border: 1px solid var(--gray-border);
+        border-left: 1px solid var(--gray-border);
         background: var(--white);
     }
 

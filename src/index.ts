@@ -1,1 +1,1 @@
-export { DevPanelContainer } from './containers/DevPanelContainer';
+export { DevtoolsAppContainer as DevtoolsApp } from './containers/DevtoolsAppContainer';

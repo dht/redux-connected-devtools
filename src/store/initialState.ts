@@ -3,8 +3,6 @@ import {
     IReduxConnectedConfig,
     ConnectionType,
     RetryStrategy,
-    ActionLogBuilder,
-    apiActions,
 } from 'redux-connected';
 
 type IAppState = {
@@ -25,6 +23,7 @@ export const initialState: MyStore = {
 
 const config: IReduxConnectedConfig = {
     defaultEndpointsConfig: {
+        id: 'default',
         connectionType: ConnectionType.REST,
         retryStrategy: RetryStrategy.X2_TIMES,
     },

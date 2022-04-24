@@ -1,16 +1,15 @@
-import DevMenu from '../DevMenu/DevMenu';
+import DevMenu from '../../containers/DevMenuContainer';
 import React, { useState } from 'react';
-import { Container, Content } from './DevPanel.style';
+import { Actions, Container, Content } from './DevPanel.style';
 import { devComponents } from '../../data/devComponents';
-import { devGroups, devRoutes, IDevRoute } from '../../data/devRouter';
+import { devRoutes, IDevRoute } from '../../data/devRoutes';
 import { Json } from '../../types';
 
 export type DevPanelProps = {
-    name: string;
+    children: JSX.Element | JSX.Element[];
 };
 
 export function DevPanel(props: DevPanelProps) {
-    const { name } = props;
     const [route, setRoute] = useState<IDevRoute>(devRoutes[0]);
 
     function renderRoute() {
@@ -24,18 +23,18 @@ export function DevPanel(props: DevPanelProps) {
             data-testid='DevPanel-container'
         >
             <DevMenu
-                groups={devGroups}
-                items={devRoutes}
                 selectedId={route.id}
                 onClick={(item: IDevRoute) => setRoute(item)}
             />
-            <Content>
-                {name}
-                {renderRoute()}
-            </Content>
+            <Actions>{props.children}</Actions>
+            <Content>{renderRoute()}</Content>
         </Container>
     );
 }
+
+/*
+    for the chrome extension devtools panel
+    TODO: find another way to encapsulate this
 
 let bgConnection;
 
@@ -55,5 +54,6 @@ if (chrome) {
     const tabId = String(chrome.devtools?.inspectedWindow.tabId || '');
     init(tabId);
 }
+*/
 
 export default DevPanel;
