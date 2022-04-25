@@ -43,7 +43,7 @@
         "rimraf": "^3.0.2 ",
         "ts-jest": "^27.0.5",
         "ts-loader": "^8.0.0",
-        "typescript": "^4.4.3 ",
+        "typescript": "^4.5.5",
         "vite": "^2.6.4",
         "vite-plugin-react-svg": "^0.2.0",
         "vite-tsconfig-paths": "^3.3.13",
