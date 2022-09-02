@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Col, Id, Type } from './RequestRow.style';
 import Time from '../Time/Time';
-import { Json } from '../../types';
 import { ApiRequest } from 'redux-connected';
 
 export type RequestRowProps = {

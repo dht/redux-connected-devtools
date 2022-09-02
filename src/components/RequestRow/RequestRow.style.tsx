@@ -6,6 +6,7 @@ export const Container = styled.div<{ index: number }>`
     flex-direction: row;
     align-items: center;
     padding: 10px;
+    max-width: 90%;
     background-color: ${(props) =>
         props.index % 2 === 1 ? 'rgba(0, 0, 0, 0.2)' : 'transparent'};
 

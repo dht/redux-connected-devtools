@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Actions, Container, Content } from './DevPanel.style';
 import { devComponents } from '../../data/devComponents';
 import { devRoutes, IDevRoute } from '../../data/devRoutes';
-import { Json } from '../../types';
 
 export type DevPanelProps = {
     children: JSX.Element | JSX.Element[];

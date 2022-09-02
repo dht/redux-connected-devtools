@@ -1,7 +1,6 @@
 import { debounce } from 'lodash';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Json } from '../types';
 
 type Callback = () => void;
 

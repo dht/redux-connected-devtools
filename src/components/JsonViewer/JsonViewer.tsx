@@ -1,5 +1,4 @@
 import React from 'react';
-import { Json } from '../../types';
 import { Container } from './JsonViewer.style';
 
 export type JsonViewerProps = {

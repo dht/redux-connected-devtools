@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: flex-start;
     font-family: monospace;
+    color: #99a;
 `;
 
 export const Full = styled.div`

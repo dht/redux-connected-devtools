@@ -1,5 +1,3 @@
-import { Json } from '../types';
-
 export const download = (filename: string, json: Json) => {
     const data = JSON.stringify(json, null, 4);
 
