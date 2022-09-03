@@ -1,19 +1,24 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "module": "commonjs",
-        "target": "es6",
+        "outDir": "dist",
+        "target": "es2017",
+        "module": "ESNext",
+        "moduleResolution": "node",
         "esModuleInterop": true,
-        "sourceMap": false,
-        "rootDir": "src",
-        "outDir": "dist/js",
-        "noEmitOnError": true,
-        "jsx": "react",
-        "typeRoots": [ "node_modules/@types" ],
-        
+        "jsx": "react-jsx",
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "declarationDir": "dist/dts",
+        "strict": true,
+        "skipLibCheck": true,
+        "baseUrl": "../../",
+        "types": ["types-base", "@gdi/types", "@types/jest"],
+        "paths": {
+            "@gdi/template-gdi": ["packages/gdi-template-gdi"],
+            "@gdi/template-blog": ["packages/gdi-template-blog"],
+            "@gdi/galleries": ["packages/gdi-galleries"],
+            "@gdi/store-mixer": ["packages/gdi-store-mixer"]
+        }
     },
-    "exclude": [
-        "node_modules",
-        "vite.config.ts",
-    ]
+    "include": ["src/*.ts", "test/*.ts"]
 }
