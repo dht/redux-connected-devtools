@@ -9,6 +9,7 @@ export type JourneyRowProps = {
 
 const statusMap: Record<LifecycleStatus, string> = {
     [LifecycleStatus.RECEIVED]: 'Received',
+    [LifecycleStatus.POST_ACTION_OPTIMISTIC]: 'Post action (optimistic)',
     [LifecycleStatus.IN_QUEUE]: 'In queue',
     [LifecycleStatus.GENERAL_ERROR]: 'General error',
     [LifecycleStatus.PENDING_API_RESPONSE]: 'Pending API',
