@@ -21,8 +21,8 @@
         "@redux-devtools/extension": "^3.2.2",
         "dotenv-flow": "^3.2.0",
         "react-redux": "^7.2.6",
-        "redux-connected": "^0.0.85",
-        "redux-store-generator": "^0.9.85",
+        "redux-connected": "^0.0.101",
+        "redux-store-generator": "^0.9.86",
         "reselect": "^4.1.5",
         "styled-components": "^5.3.3",
         "tslib": "^2.3.1"
