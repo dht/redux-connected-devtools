@@ -15,7 +15,7 @@
         "baseUrl": "../../",
         "types": ["types-base", "@gdi/types", "@types/jest"],
         "paths": {
-            "@gdi/store-mixer": ["packages/gdi-store-mixer"]
+            "@gdi/store-mixer": ["stores/gdi-store-mixer"]
         }
     },
     "include": ["src/*.ts", "test/*.ts"]
