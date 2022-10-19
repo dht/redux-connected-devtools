@@ -146,10 +146,8 @@ export const $requestsApiError = createSelector($requests, (requests) => {
 export const $requestsFailed = createSelector($requests, (requests) => {
     return requests.filter((request) => {
         const { items } = request;
-        
-        return items.find(
-            (point) => point.status === LifecycleStatus.FAILED
-        );
+
+        return items.find((point) => point.status === LifecycleStatus.FAILED);
     });
 });
 
