@@ -50,7 +50,7 @@ function init(id: string) {
 }
 
 if (chrome) {
-    const tabId = String(chrome.devtools?.inspectedWindow.tabId || '');
+    const tabId = String(chrome.devtools?.inspectedWindow.tabId ?? '');
     init(tabId);
 }
 */

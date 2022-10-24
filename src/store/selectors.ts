@@ -8,10 +8,10 @@ export const $requests = createSelector(
             .map((request) => {
                 const { items } = request;
 
-                const lastPoint = items[items.length - 1] || {};
+                const lastPoint = items[items.length - 1] ?? {};
 
                 const journeyWithDelta = items.map((point, index) => {
-                    const nextPoint = items[index + 1] || point;
+                    const nextPoint = items[index + 1] ?? point;
                     const delta = nextPoint.timestamp - point.timestamp;
 
                     return {
