@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const Actions = styled.div`
     position: absolute;
     bottom: 5px;
-    left: 10px;
+    ${(props) => props.theme.left('10px')}
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -28,7 +28,7 @@ export const DataIcon = styled.div`
     font-weight: bold;
     color: purple;
     border-radius: 5px;
-    margin-left: 10px;
+    ${(props) => props.theme.marginLeft('10px')}
 `;
 
 export const Delta = styled.div`
@@ -36,7 +36,7 @@ export const Delta = styled.div`
     width: 60px;
     font-weight: bold;
     color: olive;
-    margin-right: 10px;
+    ${(props) => props.theme.marginRight('10px')}
     text-align: center;
     font-family: monospace;
 `;

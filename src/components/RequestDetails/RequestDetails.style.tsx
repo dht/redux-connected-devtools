@@ -15,6 +15,6 @@ export const Td = styled.td`
     &:first-child {
         color: #778;
         text-align: right;
-        padding-right: 10px;
+        ${(props) => props.theme.paddingRight('10px')}
     }
 `;
