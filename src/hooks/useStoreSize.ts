@@ -1,6 +1,5 @@
-import debounce from 'lodash/debounce';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { debounce } from 'shared-base';
 
 type Callback = () => void;
 

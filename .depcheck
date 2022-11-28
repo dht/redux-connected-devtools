@@ -1,0 +1,20 @@
+Unused dependencies
+* @redux-devtools/extension
+* dotenv-flow
+* redux-store-generator
+* tslib
+Unused devDependencies
+* @types/chrome
+* glob
+* ts-loader
+* vite-plugin-react-svg
+* vite-tsconfig-paths
+* webpack-cli
+Missing dependencies
+* vite-plugin-dts: ./vite.config.ts
+* rollup-plugin-analyzer: ./vite.config.ts
+* shared-base: ./vite.config.ts
+* lodash: ./src/hooks/useStoreSize.ts
+* bytes: ./src/components/Size/Size.tsx
+* classnames: ./src/components/DevtoolsApp/DevtoolsApp.tsx
+* react-window: ./src/components/DevList/DevList.tsx
