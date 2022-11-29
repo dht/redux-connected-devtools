@@ -18,16 +18,19 @@ export const MenuGroupTitle = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
 `;
 
-export const MenuItem = styled.div<{ selected: boolean }>`
+export const MenuItem = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 6px 10px;
     font-size: 14px;
-    color: ${(props) =>
-        props.selected ? 'gold' : 'rgba(255, 255, 255, 0.89)'};
-    background-color: ${(props) =>
-        props.selected ? 'rgba(255, 255, 255, 0.05)' : 'transparent'};
+    color: rgba(255, 255, 255, 0.89);
+    background-color: transparent;
+
+    &.selected {
+        color: gold;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.1);
